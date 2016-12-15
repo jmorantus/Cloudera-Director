@@ -333,7 +333,7 @@ net ads keytab create -S ${ADDC} -U ${ADJOIN_USER}%${ADJOIN_PASSWORD}
 authconfig --enablesssd --enablesssdauth --enablemkhomedir --update
 service sssd restart
 
-## Setup Dynamic DNS Updates
+## Setup Dynamic DNS Updates. REPLACE WITH YOUR OWN PATH
 sh /home/azuredirectoradmin/config/OS-bootstrap.sh
 
 ## Enable and start nscd
