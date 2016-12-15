@@ -187,18 +187,9 @@ net ads keytab create -S ${ADDC} -U ${ADJOIN_USER}%${ADJOIN_PASSWORD}
 authconfig --enablesssd --enablesssdauth --enablemkhomedir --update
 service sssd restart
 
-## Setup Dynamic DNS Updates
+## Setup Dynamic DNS Updates. REPLACE WITH YOUR OWN PATH
 sh /root/OS-bootstrap.sh
 
 ## Enable and start nscd
 chkconfig nscd on
 service nscd start
-
-#Install MySQL JDBC Driver
-#wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.39.tar.gz -O /tmp/mysql-connector-java-5.1.39.tar.gz
-#tar zxvf /tmp/mysql-connector-java-5.1.39.tar.gz -C /tmp/
-#mkdir -p /usr/share/java/
-#cp /tmp/mysql-connector-java-5.1.39/mysql-connector-java-5.1.39-bin.jar /usr/share/java/
-#rm /usr/share/java/mysql-connector-java.jar
-#ln -s /usr/share/java/mysql-connector-java-5.1.39-bin.jar /usr/share/java/mysql-connector-java.jar
-
